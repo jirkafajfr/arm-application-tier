@@ -170,9 +170,9 @@
     "windowsAndAttachedDisk": "[and(parameters('infrastructure').disk.attachedDisk.enabled, not(equals(parameters('infrastructure').operatingSystem.imageOffer, 'CentOS')))]",
     "centOSAndAttachedDisk": "[and(parameters('infrastructure').disk.attachedDisk.enabled, equals(parameters('infrastructure').operatingSystem.imageOffer, 'CentOS'))]",
     "windowsProvisionerModuleName": "Provisioner.zip",
-    "windowsProvisionerDSCModule": "[concat('https://raw.githubusercontent.com/jkerry/arm-application-tier/v', variables('script_version'), '/scripts/powershell_dsc/', variables('windowsProvisionerModuleName'))]",
+    "windowsProvisionerDSCModule": "[concat('https://raw.githubusercontent.com/jirkafajfr/arm-application-tier/loadbalancer-distribution-mode-outside-pull', '/scripts/powershell_dsc/', variables('windowsProvisionerModuleName'))]",
     "centosProvisionerScriptName": "deploy.sh",
-    "centosProvisionerScriptPath": "[concat('https://raw.githubusercontent.com/jkerry/arm-application-tier/v', variables('script_version'), '/scripts/bash/', variables('centosProvisionerScriptName'))]"
+    "centosProvisionerScriptPath": "[concat('https://raw.githubusercontent.com/jirkafajfr/arm-application-tier/loadbalancer-distribution-mode-outside-pull', '/scripts/bash/', variables('centosProvisionerScriptName'))]"
   },
   "resources": [
     {
